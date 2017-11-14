@@ -30,6 +30,15 @@ public class ViewAplikasiPendataan extends javax.swing.JFrame {
     private void initComponents() {
 
         jRadioButton1 = new javax.swing.JRadioButton();
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
+        buttonGroup3 = new javax.swing.ButtonGroup();
+        buttonGroup4 = new javax.swing.ButtonGroup();
+        buttonGroup5 = new javax.swing.ButtonGroup();
+        buttonGroup6 = new javax.swing.ButtonGroup();
+        buttonGroup7 = new javax.swing.ButtonGroup();
+        buttonGroup8 = new javax.swing.ButtonGroup();
+        buttonGroup9 = new javax.swing.ButtonGroup();
         jJudul1 = new javax.swing.JLabel();
         jNama = new javax.swing.JLabel();
         jKelamin = new javax.swing.JLabel();
@@ -67,8 +76,10 @@ public class ViewAplikasiPendataan extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup1.add(radioMale);
         radioMale.setText("Male");
 
+        buttonGroup1.add(radioFemale);
         radioFemale.setText("Female");
 
         jJurusan.setText("Jurusan");
@@ -95,6 +106,7 @@ public class ViewAplikasiPendataan extends javax.swing.JFrame {
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
+        listAreaPenempatan.setToolTipText("");
         listAreaPenempatan.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jScrollPane1.setViewportView(listAreaPenempatan);
 
@@ -191,14 +203,10 @@ public class ViewAplikasiPendataan extends javax.swing.JFrame {
         // TODO add your handling code here:
         String jenisKelamin = " ";
         
-        if (radioMale.isSelected() && radioFemale.isSelected()){
-            jenisKelamin = "Kesalahan \"Harap Pilih Salah satu\"";
-        }else if (radioMale.isSelected()){
+        if (radioMale.isSelected()){
             jenisKelamin = "Male";
-        }else if (radioFemale.isSelected()){
-            jenisKelamin = "Female";
         }else{
-            jenisKelamin = "Harap Pilih jenis Kelamin";
+            jenisKelamin = "Female";
         }
         
         String jurusan = comboboxJurusan.getSelectedItem().toString();
@@ -283,6 +291,15 @@ public class ViewAplikasiPendataan extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField InputNama;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.ButtonGroup buttonGroup3;
+    private javax.swing.ButtonGroup buttonGroup4;
+    private javax.swing.ButtonGroup buttonGroup5;
+    private javax.swing.ButtonGroup buttonGroup6;
+    private javax.swing.ButtonGroup buttonGroup7;
+    private javax.swing.ButtonGroup buttonGroup8;
+    private javax.swing.ButtonGroup buttonGroup9;
     private javax.swing.JButton buttonSimpan;
     private javax.swing.JCheckBox checkboxDesignUIUX;
     private javax.swing.JCheckBox checkboxGame;
